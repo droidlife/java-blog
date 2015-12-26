@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
 
 @Entity
 public class User {
@@ -17,9 +18,12 @@ public class User {
 	@GeneratedValue
 	private Integer id;
 	
+	@Size(min=3,message="Name must be 3 character")
 	private String name;
 	
 	private String email;
+	
+	@Size(min=3,message="Name must be 3 character")
 	private String password;
 	
 	private boolean enabled;
