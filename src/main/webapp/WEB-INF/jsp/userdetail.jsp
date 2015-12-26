@@ -8,7 +8,7 @@
 <body>
 	<div class="container">
 		<object align="middle">
-			<h1>${user.name}</h1>
+			<h1><catlina:out value="${user.name}" /></h1>
 		</object>
 
 		<!-- Button trigger modal -->
