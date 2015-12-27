@@ -86,15 +86,23 @@
 					<table class="table table-bordered table-hover table-striped">
 						<thead>
 							<tr>
-								<th>Title</th>
-								<th>Link</th>
+								<th>Date</th>
+								<th>Item</th>
 							</tr>
 						</thead>
 						<tbody>
 							<catlina:forEach items="${blog.items}" var="item">
 								<tr>
-									<td>${item.title}</td>
-									<td>${item.link}</td>
+									<td>${item.date}</td>
+									<td>
+									   <strong>
+								          <a href="<catlina:out value="${item.link}" />" target="_blank">
+								         <catlina:out value="${item.title}" /> 
+									   </a>
+									   </strong>
+									   <br />
+									   ${item.description}
+									</td>
 								</tr>
 							</catlina:forEach>
 						</tbody>
