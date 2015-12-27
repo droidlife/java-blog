@@ -55,9 +55,19 @@
 					{
 				rules : {
 					name: {
+						
 						required : true,
-						minlength : 3
-					},
+						minlength : 3,
+						remote : {
+							url : "<spring:url value='/register/available.html' />" ,
+							type: "GET",
+								data: {
+									username: function() {
+										return $("#name").val();
+									}
+								}
+						}
+						},
 					password: {
 						required : true,
 						minlength : 3
@@ -66,6 +76,17 @@
 						required : true,
 						minlength : 3,
 						equalTo:"#password"
+					}
+				},
+				highlight:function(element) {
+					$(element).closest(".form-group").removeClass("has-success").addClass("has-error");
+				},
+				unhighlight:function(element) {
+					$(element).closest(".form-group").removeClass("has-error").addClass("has-success");
+				},
+				messages : {
+					name: {
+						remote :"Username already exists"
 					}
 				}
 			});
