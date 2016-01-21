@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="../layout/taglib.jsp"%>
 <jsp:include page="home.jsp" flush="true" />
+
 <html>
 
 <body>

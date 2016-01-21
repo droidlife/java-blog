@@ -94,9 +94,9 @@ public class UserController {
 		userService.delete(id);
 		return "redirect:/users.html";
 	}
-	
-	@RequestMapping("/register/available")
 	@ResponseBody
+	@RequestMapping("/register/available")
+	
 	public String avilable(@RequestParam String username){
 		Boolean available = userService.findOne(username) == null;
 		return available.toString();
