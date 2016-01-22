@@ -1,7 +1,9 @@
 # java-blog
-#This webapp uses a MySql database
+This is a rss feeder.
+It extracts the data from multiple feeds and show it at your page.
 
-#Currently i am getting error in jetty server
-#Working completely fine at Apache tomcat8
+You can sign up and login in the blog and customize your own feeds.
 
-#I will keep updating
+#For administrative access:
+username: ADMIN
+password: ADMIN
