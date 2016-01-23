@@ -229,8 +229,6 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-                        <outputDirectory>webapps</outputDirectory>
-                        <warName>ROOT</warName>
 				</configuration>
 			</plugin>
 
@@ -240,6 +238,8 @@
 				<version>2.1.1</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<outputDirectory>webapps</outputDirectory>
+                        <warName>ROOT</warName>
 				</configuration>
 			</plugin>
 
